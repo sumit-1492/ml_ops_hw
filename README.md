@@ -23,3 +23,8 @@ download the data set from the source
 git init
 dvc init
 dvc add data_given/<name of data>.csv
+
+All change we have made will store in git
+
+git add .
+git commit -m "msg"
