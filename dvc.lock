@@ -1,0 +1,34 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=params.yaml
+    deps:
+    - path: data_given/ai4i2020.csv
+      md5: 399512e3f0c18aa56d036f7d78fe96b1
+      size: 522048
+    - path: src/get_data.py
+      md5: a5cfe62dc935a9514439855a5b279a94
+      size: 721
+    - path: src/load_data.py
+      md5: 13d9252484bf2dac89eb8e7d0dafac1c
+      size: 656
+    outs:
+    - path: data/raw/ai4i2020.csv
+      md5: 0208394211f81038e73fb9437fbb19ed
+      size: 523915
+  split_data:
+    cmd: python src/split_data.py --config=params.yaml
+    deps:
+    - path: data/raw/ai4i2020.csv
+      md5: 0208394211f81038e73fb9437fbb19ed
+      size: 523915
+    - path: src/split_data.py
+      md5: 095e138c429e5daa8b269ef4dddbd381
+      size: 1098
+    outs:
+    - path: data/processed/test_ai4i2020.csv
+      md5: 4605f0ea42efc652486268fc252f571a
+      size: 52537
+    - path: data/processed/train_ai4i2020.csv
+      md5: 1a296f8ec36ca6b9a71b37b8918fd2ea
+      size: 471530
