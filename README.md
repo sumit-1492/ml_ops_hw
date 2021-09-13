@@ -1,11 +1,12 @@
 step -1
 
 '''
+
 create environment 
 
 '''
 
-# windows machine
+# commands for windows machine
 
 goto annaconda prompt cell
 
