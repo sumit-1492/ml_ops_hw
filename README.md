@@ -9,7 +9,7 @@ create environment
 
 goto annaconda prompt cell
 
-cd <go to the folder you awnt to work with>
+cd <"go to the folder you awnt to work with">
 
 code .
 
@@ -21,9 +21,9 @@ in the vs code terminal
 
 type "conda init"
 
-"conda -n <envname> python=3.7 -y"
+"conda -n <"envname"> python=3.7 -y"
 
-"conda activate <envname>"
+"conda activate <"envname">"
 
 step -3
 
@@ -40,7 +40,7 @@ git init
 
 dvc init
 
-dvc add data_given/<name of data>.csv
+dvc add data_given/<"name of data">.csv
 
 All change we have made will store in git
 
