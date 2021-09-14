@@ -42,10 +42,7 @@ def train_and_evaluate(config_path):
     train_x = train.drop(target, axis=1)
     test_x = test.drop(target, axis=1)
 
-    lr = ElasticNet(
-        alpha=alpha, 
-        l1_ratio=l1_ratio, 
-        random_state=random_state)
+    lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=random_state )
     lr.fit(train_x, train_y)
 
     predicted_qualities = lr.predict(test_x)
@@ -87,6 +84,6 @@ def train_and_evaluate(config_path):
 
 if __name__=="__main__":
     args = argparse.ArgumentParser()
-    args.add_argument("--config", default="params.yaml")
+    args.add_argument("--config", default = "params.yaml")
     parsed_args = args.parse_args()
     train_and_evaluate(config_path=parsed_args.config)
