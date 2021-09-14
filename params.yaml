@@ -1,7 +1,7 @@
 base:
   project: airtemperature-project
   random_state: 200
-  target_col: Air_temperature_[K]
+  target_col: Airtemperature[K]
 
 data_source:
   s3_source: data_given/ai4i2020.csv
