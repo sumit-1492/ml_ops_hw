@@ -1,6 +1,7 @@
 step -1
 
-'''bash
+'''
+bash
 create environment 
 '''
 
