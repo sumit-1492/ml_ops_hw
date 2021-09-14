@@ -39,8 +39,8 @@ def train_and_evaluate(config_path):
     train_y = train[target]
     test_y = test[target]
 
-    train_x = train.drop(target, axis=1)
-    test_x = test.drop(target, axis=1)
+    train_x = train.drop(target,'UDI','ProductID','Type',axis=1)
+    test_x = test.drop(target,'UDI','Product ID','Type',axis=1)
 
     lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=random_state )
     lr.fit(train_x,train_y)

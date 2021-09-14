@@ -10,8 +10,8 @@ stages:
       md5: a5cfe62dc935a9514439855a5b279a94
       size: 721
     - path: src/load_data.py
-      md5: 8e217826fdfe5ac3e9375ced2715732e
-      size: 655
+      md5: 959aa43e9b11190d4c08fea19bd1c62c
+      size: 647
     outs:
     - path: data/raw/ai4i2020.csv
       md5: 31defaf967cc38066c344b01381ab65f
