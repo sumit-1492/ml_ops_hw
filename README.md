@@ -1,9 +1,7 @@
 step -1
 
-'''
-
+'''bash
 create environment 
-
 '''
 
 # commands for windows machine
