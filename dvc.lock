@@ -10,37 +10,37 @@ stages:
       md5: a5cfe62dc935a9514439855a5b279a94
       size: 721
     - path: src/load_data.py
-      md5: e16f2d9f7a4bc9900efebdc46acf34d0
-      size: 718
+      md5: 400e155dc6b1b48b942bc3b246f63910
+      size: 736
     outs:
     - path: data/raw/ai4i2020.csv
-      md5: d5ae9375858f91fafe71b4f4ab4fe183
-      size: 384991
+      md5: 87d67d739fc9620f1ac1fef6268894c3
+      size: 364976
   split_data:
     cmd: python src/split_data.py --config=params.yaml
     deps:
     - path: data/raw/ai4i2020.csv
-      md5: d5ae9375858f91fafe71b4f4ab4fe183
-      size: 384991
+      md5: 87d67d739fc9620f1ac1fef6268894c3
+      size: 364976
     - path: src/split_data.py
       md5: 095e138c429e5daa8b269ef4dddbd381
       size: 1098
     outs:
     - path: data/processed/test_ai4i2020.csv
-      md5: e47fd92b337a78d5b47995114a53e93a
-      size: 38612
+      md5: 84417b15221090d46e6854b5533a8b3a
+      size: 36597
     - path: data/processed/train_ai4i2020.csv
-      md5: 783bc250aa0878b622e270d42da6e2f5
-      size: 346501
+      md5: dd5d64c797514de0c2b56cb8c594b15f
+      size: 328486
   train_and_evaluate:
     cmd: python src/train_and_evaluate.py --config=params.yaml
     deps:
     - path: data/processed/test_ai4i2020.csv
-      md5: e47fd92b337a78d5b47995114a53e93a
-      size: 38612
+      md5: 84417b15221090d46e6854b5533a8b3a
+      size: 36597
     - path: data/processed/train_ai4i2020.csv
-      md5: 783bc250aa0878b622e270d42da6e2f5
-      size: 346501
+      md5: dd5d64c797514de0c2b56cb8c594b15f
+      size: 328486
     - path: src/train_and_evaluate.py
       md5: 06eea006df77f53648fc8c64fc3f74cb
       size: 2650
@@ -53,8 +53,8 @@ stages:
       md5: 2bf324eaa7c4456666be541cf64b9f3f
       size: 60
     - path: report/scores.json
-      md5: c5143c204d9b62ce1d0491dd28159d30
+      md5: 2bb9a9ff488ce9aea92bc15f07aeed88
       size: 98
     - path: saved_models/model.joblib
-      md5: bb7d147a1badb07ca2c1136660682290
-      size: 810
+      md5: f9417316330763021ff47e45336d3132
+      size: 802
