@@ -28,11 +28,8 @@ def predict(data):
 def api_response(request):
     pass
 
-@app.route('/',methods=['GET'])  # route to display the home page
-def homePage():
-    return render_template("index.html")
 
-@app.route('/predict',methods=['POST','GET']) # route to show the predictions in a web UI
+@app.route('/',methods=['POST','GET']) # route to show the predictions in a web UI
 def index():
     if request.method == 'POST':
         try:
@@ -40,7 +37,7 @@ def index():
                 data = dict(request.form).values()
                 data = [list((map(float,data)))]
                 response = predict(data)
-                return render_template("results.html",response=response)
+                return render_template("index.html",response=response)
             
             elif request.json:
                 response = api_response(request)
