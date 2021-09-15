@@ -40,7 +40,7 @@ def index():
                 data = dict(request.form).values()
                 data = [list((map(float,data)))]
                 response = predict(data)
-                return render_template('results.html',response=response)
+                return render_template("results.html",response=response)
             
             elif request.json:
                 response = api_response(request)
