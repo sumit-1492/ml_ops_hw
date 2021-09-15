@@ -23,10 +23,20 @@ def predict(data):
     model = joblib.load(model_dir_path)
     prediction = model.predict(data)
     print(prediction)
-    return prediction
+    return prediction[0]
 
 def api_response(request):
-    pass
+    try:
+        data = np.array([list(request.json.values())])
+        response = predict(data)
+        response = {"response":response}
+        return response
+    except Exception as e:
+        print(e)
+        error = {"error": "Something went wrong!! Try again later!"}
+        error = {"error": e}
+        return render_template("404.html", error=error)
+
 
 @app.route('/',methods=['GET'])  # route to display the home page
 def homePage():
@@ -54,6 +64,7 @@ def index():
             return render_template("404.html", error=error)
     else:
         return render_template('index.html')
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
