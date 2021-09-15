@@ -8,41 +8,92 @@ create environment
 
 goto annaconda prompt cell
 
+```bash
 cd <"go to the folder you awnt to work with">
+```
 
+```bash
 code .
+```
 
-''' code . will take you to the vs code with the required folder'''
+ code . will take you to the vs code with the required folder
 
 step -2
 
-in the vs code terminal
+In the vs code terminal
 
-type "conda init"
+```bash
+conda init
+```
 
-"conda -n <"envname"> python=3.7 -y"
+```bash
+conda -n <"envname"> python=3.7 -y
+```
 
-"conda activate <"envname">"
+```bash
+conda activate <"envname">
+```
 
 step -3
 
-create "reqirements.txt" file 
+```bash
+create reqirements.txt file 
+```
 
-"pip install -r requirements.txt"
+```bash
+pip install -r requirements.txt
+```
 
+```bash
 download the data set from the source
+```
 
-"put it in data_given folder"
+```bash
+put it in data_given folder
+```
 
 
+```bash
 git init
+```
 
+```bash
 dvc init
+```
 
+```bash
 dvc add data_given/<"name of data">.csv
+```
 
 All change we have made will store in git
 
+```bash
 git add .
+```
 
+```bash
 git commit -m "msg"
+```
+
+tox command-
+```bash
+tox
+```
+for rebuilding -
+```bash 
+tox -r
+```
+pytest command -
+```bash 
+pytest -v
+```
+
+setup commands -
+```bash
+pip install -e .
+```
+
+bulid your own package command -
+```bash
+python setup.py sdist bdist wheel
+```
