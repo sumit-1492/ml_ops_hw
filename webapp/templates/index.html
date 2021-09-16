@@ -15,7 +15,7 @@ WineQuality
 <!-- nav bar -->
 
 <nav class="navbar navbar-expand-lg navbar-light shadow fixed-top" style="background-color: #e3f2fd;">
-    <a class="navbar-brand" href="/">WineQualityPrediction</a>
+    <a class="navbar-brand" href="/">Air_Temperature_Prediction</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -26,7 +26,7 @@ WineQuality
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="https://github.com/c17hawke/dvc-plus-cml-test">source code</a>
+                <a class="nav-link" href="https://github.com/sumit-1492/ml_ops_hw">source code</a>
             </li>
         </ul>
     </div>
@@ -50,24 +50,24 @@ WineQuality
                                     <p class="mb-2">Enter the details as indicated:</p>
                                 </blockquote>
                             </label>
-                            <textarea class="form-control" name="pt" rows="1"
-                                placeholder="fixed acidity expected range 4.6 to 15.9"></textarea>
-                            <textarea class="form-control" name="rs" rows="1"
-                                placeholder="volatile acidity expected range 0.12 to 1.58"></textarea>
-                            <textarea class="form-control" name="tq" rows="1"
-                                placeholder="citric acid expected range 0.0 to 1.0"></textarea>
-                            <textarea class="form-control" name="tw" rows="1"
-                                placeholder="residual sugar expected range 0.9 to 15.5"></textarea>
+                            <textarea class="form-control" name="Process Temperature[K]" rows="1"
+                                placeholder="Process Temperature[K] expected range 305.7 to 313.8"></textarea><br>
+                            <textarea class="form-control" name="Rotational Speed[RPM]" rows="1"
+                                placeholder="Rotational Speed[RPM] expected range 1168 to 2886"></textarea><br>
+                            <textarea class="form-control" name="Torque[Nm]" rows="1"
+                                placeholder="Torque[Nm] expected range 3.8 to 76.6"></textarea><br>
+                            <textarea class="form-control" name="Tool Wear" rows="1"
+                                placeholder="Tool Wear expected range 0.0 to 253.0"></textarea><br>
                             <textarea class="form-control" name="TWF" rows="1" 
-                                placeholder="chlorides expected range 0.012 to 0.611"></textarea>
+                                placeholder="TWF expected range 0.0 to 1.0"></textarea><br>
                             <textarea class="form-control" name="HDF" rows="1"
-                                placeholder="free sulfur dioxide expected range 1.0 to 72.0"></textarea>
+                                placeholder="HDF expected range 0.0 to 1.0"></textarea><br>
                             <textarea class="form-control" name="PWF" rows="1"
-                                placeholder="total sulfur dioxide expected range 6.0 to 289.0"></textarea>
+                                placeholder="PWF expected range 0.0 to 1.0"></textarea><br>
                             <textarea class="form-control" name="OSF" rows="1" 
-                                placeholder="density expected range 0.99007 to 1.00369"></textarea>
+                                placeholder="OSF range 0.0 to 1.0"></textarea><br>
                             <textarea class="form-control" name="RNF" rows="1" 
-                                placeholder="pH expected range 2.74 to 4.01"></textarea>
+                                placeholder="RNF expected range 0.0 to 1.0"></textarea><br>
 
                         </div>
 
@@ -89,7 +89,7 @@ WineQuality
                                 </blockquote>
 
                             </label>
-                            <textarea readonly class="form-control" id="exTextarea" rows="5">Air temp is {{ response }}</textarea>
+                            <textarea readonly class="form-control" id="exTextarea" rows="5">Air temp is {{ response }} kelvin</textarea>
                         </div>
                     </form>
                 </div>
