@@ -45,4 +45,4 @@ jobs:
 
         git fetch --all --unshallow
 
-        git push heroku HEAD:main 
+        git push heroku HEAD:main -f
